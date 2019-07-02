@@ -74,6 +74,7 @@ pip --version
 docker --version
 ```
 
+
 ![powershell-check](/assets/powershell-check.png)
 
 รูปที่ 5 คำสั่งและการแสดงผลของเวอร์ชันของซอฟแวร์แต่ละรุ่น
