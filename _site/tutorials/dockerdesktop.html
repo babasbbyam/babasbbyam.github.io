@@ -7,25 +7,25 @@
   <meta charset="UTF-8">
 
   <!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Docker Desktop | MECAs Document</title>
+<title>Install Docker Desktop for Windows | MECAs Document</title>
 <meta name="generator" content="Jekyll v3.7.4" />
-<meta property="og:title" content="Docker Desktop" />
+<meta property="og:title" content="Install Docker Desktop for Windows" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="download Docker for Windows" />
-<meta property="og:description" content="download Docker for Windows" />
+<meta name="description" content="Docker Desktop for Windows คือ Docker Community Edition (CE) สำหรับ Microsoft Windows. โดย Community Edition (CE) เป็นชื่อรุ่นใช้งานฟรีของ Docker." />
+<meta property="og:description" content="Docker Desktop for Windows คือ Docker Community Edition (CE) สำหรับ Microsoft Windows. โดย Community Edition (CE) เป็นชื่อรุ่นใช้งานฟรีของ Docker." />
 <link rel="canonical" href="http://localhost:4000/tutorials/dockerdesktop.html" />
 <meta property="og:url" content="http://localhost:4000/tutorials/dockerdesktop.html" />
 <meta property="og:site_name" content="MECAs Document" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2019-06-27T16:26:46+07:00" />
+<meta property="article:published_time" content="2019-07-02T14:55:16+07:00" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","url":"http://localhost:4000/tutorials/dockerdesktop.html","headline":"Docker Desktop","dateModified":"2019-06-27T16:26:46+07:00","datePublished":"2019-06-27T16:26:46+07:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/tutorials/dockerdesktop.html"},"description":"download Docker for Windows","@context":"http://schema.org"}</script>
+{"@type":"BlogPosting","url":"http://localhost:4000/tutorials/dockerdesktop.html","headline":"Install Docker Desktop for Windows","dateModified":"2019-07-02T14:55:16+07:00","datePublished":"2019-07-02T14:55:16+07:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/tutorials/dockerdesktop.html"},"description":"Docker Desktop for Windows คือ Docker Community Edition (CE) สำหรับ Microsoft Windows. โดย Community Edition (CE) เป็นชื่อรุ่นใช้งานฟรีของ Docker.","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#157878">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <link rel="stylesheet" href="/assets/css/style.css?v=d672a4f883e079e435bfdd900b7e68224c20ac0b">
+  <link rel="stylesheet" href="/assets/css/style.css?v=65e147eb17eada0e50f5acd3bee02e6b225eacc4">
 </head>
 
 <body>
@@ -33,23 +33,60 @@
     <a href="/" style="color: white; text-decoration: none;">MECAs Document</a>
   </nav>
   <main id="content" class="main-content" role="main">
-      <h1>Docker Desktop</h1>
-    <p>download <a href="https://hub.docker.com/editions/community/docker-ce-desktop-windows"> Docker for Windows </a></p>
+      <h1>Install Docker Desktop for Windows</h1>
+    <p>Docker Desktop for Windows คือ Docker Community Edition (CE) สำหรับ Microsoft Windows. โดย Community Edition (CE) เป็นชื่อรุ่นใช้งานฟรีของ Docker.</p>
+
+<p>ดาวน์โหลด Docker Desktop for Windows ได้ที่ <a href="https://hub.docker.com/editions/community/docker-ce-desktop-windows">Docker for Windows from Docker Hub</a></p>
+
+<h2 id="สิ่งที่ควรรู้ก่อนติดตั้ง-docker-desktop">สิ่งที่ควรรู้ก่อนติดตั้ง Docker Desktop</h2>
 
 <ul>
-  <li>สำหรับ Window 10 Pro หรือ Education ขึ้นไป และมี account docker hub</li>
-  <li>ใช้ Hyper-V เป็น VM engine แต่จะทำให้ VirtualBox ทำงานไม่ได้</li>
+  <li>Docker Desktop for Windows ใช้ Hyper-V เป็น VM engine ทำให้ VirtualBox ทำงานไม่ได้ Docker Desktop จะเปิดการใช้งาน Hyper-V สำหรับคุณหากมีความจำเป็นและทำการเริ่มต้นอุปกรณ์ของคุณใหม่/รีสตาร์ทเครื่อง</li>
+  <li>ความต้องการของระบบ
+    <ul>
+      <li>สำหรับ Window 10 Pro หรือ Education ขึ้นไป และมี account docker hub
+Windows 10 64bit: Pro, Enterprise or Education (Build 15063 or later)</li>
+      <li>CPU SLAT-capable feature.</li>
+      <li>At least 4GB of RAM</li>
+    </ul>
+  </li>
 </ul>
+
+<p>Note: หากระบบของคุณไม่ตรงตามข้อกำหนดในการเรียกใช้ Docker Desktop สำหรับ Windows คุณสามารถติดตั้ง <a href="">Docker Toolbox</a> ซึ่งใช้ Oracle Virtual Box แทน Hyper-V</p>
 
 <p><img src="/assets/docker-enable-hyper-v.png" alt="docker-enable-hyper-v" /></p>
 
 <p>รูปที่ 1 ใช้งาน docker ในโหมดของ Hyper-V แต่จะทำให้ VirtualBox ทำงานไม่ได้ หลังจากนั้นเครื่องจะ Restart และ Docker จะถูกใช้งาน อัตโนมัติ</p>
 
-<p>เมื่อกด OK จะเปิดใช้งาน Feature Hyper-V อัตโนมัติ แต่หากไม่สำเร็จ ศึกษาวิธีการเปิด Feature Hyper-V ได้ที่ <a href="https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v">ลิ้งนี้</a></p>
+<p>เมื่อกด OK จะเปิดใช้งาน Feature Hyper-V อัตโนมัติ แต่หากไม่สำเร็จ  xศึกษาวิธีการเปิด Feature Hyper-V ได้ที่ <a href="https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v">ลิ้งนี้</a></p>
+
+<h2 id="install-docker-desktop-for-windows-desktop-app">Install Docker Desktop for Windows desktop app</h2>
+
+<ol>
+  <li>Double-click ที่ Docker Desktop for Windows Installer.exe เพื่อ run the installer</li>
+  <li>ทำตามตัวช่วยการติดตั้งเพื่อยอมรับ license อนุญาตและดำเนินการติดตั้งโปรแกรม</li>
+  <li>Click ปุ่ม Finish บน the setup complete dialog เพื่อเริ่มใช้ Docker</li>
+</ol>
+
+<h2 id="เริ่มต้นการใช้งาน-docker-desktop-for-windows">เริ่มต้นการใช้งาน Docker Desktop for Windows</h2>
+
+<p>ถ้า Docker ไม่ได้เริ่มต้นอัตโนมัติภายหลังการติดตั้ง ในการจะเริ่มใช้งาน ค้นหา Docker ที่ช่องค้นหา เลือก Docker Desktop for Windows จากผลลัพท์และคลิกเปิด (หรือ กด Enter)
+<img src="/assets/docker-app-search.png" alt="docker-app-search" />
+เมื่อมีไอคอนรูปวาฬอยู่บนแถบสถานะ แสดงว่า Docker กำลังทำงานอยู่ ทำให้สามารถใช้คำสั่งบนหน้าต่าง terminal ใดๆก็ได้</p>
+
+<p><img src="/assets/whale-icon-systray.png" alt="whale-icon-systray" /></p>
+
+<p>ถ้าไอคอนหายไปจากแถบบาร์ ให้ลองคลิกไปดูที่ลูกศรขึ้นบนแถบ เพื่อแสดงไอค่อนเพิ่มเติม</p>
+
+<p>ถ้าเพิ่งติดตั้งโปรแกรมเสร็จ จะเห็น ป๊อปอัพข้องความแสดงการติดตั้งสำเร็จพร้อมกับการแนะนำ step ถัดไป และลิ้งที่ไปยัง documentation</p>
 
 <p><img src="/assets/dockerdesktop.png" alt="dockerdesktop" /></p>
 
 <p>รูปที่ 2 หน้าต่างล็อกอินเข้าสู่ Docker ซึ่งผู้ใช้งานจะต้องทำการสมัครสมาชิกก่อนถึงจะสามารถใช้งานได้</p>
+
+<p>เมื่อติดตั้งเสร็จสมบูรณ์ให้เลือก About Docker จากการคลิกขวาบนไอคอนรูปวาฬเพื่อตรวจสอบว่าเป็น Docker เวอร์ชันล่าสุด</p>
+
+<h3 id="ยินดีด้วย--docker-desktop-for-windows-พร้อมใช้งานแล้ว">ยินดีด้วย ! Docker Desktop for Windows พร้อมใช้งานแล้ว</h3>
 
 <p>ตั้งค่า Shared Drive คลิกขวาที่ไอคอน Docker ที่ Task bar เลือก Settings ไปที่ Shared Drive เลือก drive ที่ต้องแชร์ แล้วกด Apply</p>
 
@@ -78,8 +115,8 @@ docker --version
 
     <footer class="site-footer">
       
-      <span class="site-footer-owner"><a href="https://github.com/mecacloud/mecacloud.github.io">mecacloud.github.io</a>
-        is maintained by <a href="https://github.com/mecacloud">mecacloud</a>.</span>
+      <span class="site-footer-owner"><a href="https://github.com/babasbbyam/babasbbyam.github.io">babasbbyam.github.io</a>
+        is maintained by <a href="https://github.com/babasbbyam">babasbbyam</a>.</span>
       
       <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub
           Pages</a>.</span>
